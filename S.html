@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow: hidden;
+
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: grid;
+
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .close {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .open {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+
+        .open:hover {
+            background-color: #444;
+        }
+
+        #w {
+            padding: 16px;
+        }
+
+
+
+        .sidebar {
+            padding-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="B" class="sidebar">
+        <a href="javascript:void(0)" class="close" onclick="closeB()">x</a>
+        <a href="#">Profile</a>
+        <a href="#">Notifications</a>
+        <a href="#">Resources</a>
+        <a href="#">Favourites</a>
+        <a href="#">Browse</a>
+    </div>
+
+    <div id="w">
+        <button class="open" onclick="openB()"> Menu</button>
+        <h1>Welcome!Let's Study Physics.</h1>
+
+    </div>
+
+    <script>
+        function openB() {
+            document.getElementById("B").style.width = "250px";
+            document.getElementById("w").style.marginLeft = "250px";
+        }
+
+        function closeB() {
+            document.getElementById("B").style.width = "0";
+            document.getElementById("w").style.marginLeft = "0";
+        }
+    </script>
+
+</body>
+
+</html>
